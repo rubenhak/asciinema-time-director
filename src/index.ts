@@ -27,7 +27,9 @@ program.command('slow-down')
     let isNormalLine : boolean = true;
     for(const line of lines)
     {
-      newLines.push(convertLine(line));
+      if (!shouldSkip(line)) {
+        newLines.push(convertLine(line));
+      }
     }
 
     const newContents = newLines.join('\n');
@@ -74,6 +76,13 @@ program.command('slow-down')
       return Math.max(origDelta, 0.05);
     }
 
+    function shouldSkip(line: string)
+    {
+      if (line.indexOf('Restored session:') !== -1) {
+        return true;
+      }
+      return false;
+    }
   });
 
 program.parse();
