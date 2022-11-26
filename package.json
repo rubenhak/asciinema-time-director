@@ -1,0 +1,51 @@
+{
+  "name": "asciinema-time-director",
+  "version": "1.0.0",
+  "description": "asciinema-time-director",
+  "keywords": [
+  ],
+  "main": "dist/index.js",
+  "bin": {
+    "asciinema-time-director": "./bin/asciinema-time-director"
+  },
+  "preferGlobal": true,
+  "types": "dist",
+  "files": [
+    "bin/**/*",
+    "dist/**/*"
+  ],
+  "scripts": {
+    "test": "mocha -r ts-node/register 'test/**/*.ts'",
+    "build": "tsc",
+    "format": "prettier --write ./src/ ./test/",
+    "format-check": "prettier --write ./src/ ./test/",
+    "lint": "eslint",
+    "start": "tsc && node dist/index.js"
+  },
+  "author": "Ruben Hakopian <ruben.hakopian@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/rubenhak/asciinema-time-director/issues"
+  },
+  "homepage": "https://github.com/rubenhak/asciinema-time-director",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rubenhak/asciinema-time-director"
+  },
+  "dependencies": {
+    "commander": "^9.4.1"
+  },
+  "devDependencies": {
+    "@types/mocha": "^8.0.3",
+    "@types/node": "^17.0.23",
+    "@types/semver": "^7.3.12",
+    "@typescript-eslint/eslint-plugin": "^5.18.0",
+    "@typescript-eslint/parser": "^5.18.0",
+    "eslint": "^8.12.0",
+    "mocha": "^8.1.1",
+    "prettier": "^2.1.0",
+    "should": "^13.2.3",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.8.4"
+  }
+}
