@@ -2,8 +2,7 @@
   "name": "asciinema-time-director",
   "version": "1.0.0",
   "description": "asciinema-time-director",
-  "keywords": [
-  ],
+  "keywords": [],
   "main": "dist/index.js",
   "bin": {
     "asciinema-time-director": "./bin/asciinema-time-director"
@@ -33,7 +32,8 @@
     "url": "https://github.com/rubenhak/asciinema-time-director"
   },
   "dependencies": {
-    "commander": "^9.4.1"
+    "commander": "^9.4.1",
+    "the-lodash": "^2.0.9"
   },
   "devDependencies": {
     "@types/mocha": "^8.0.3",
